@@ -1,7 +1,7 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## StoryGPT
+StoryGpt, designed to educate through short, engaging stories. Unlike this example, our stories will be brief, typically featuring five scenes accompanied by an image for each scene.
 
-## Getting Started
-
+## Development
 First, run the development server:
 
 ```bash
