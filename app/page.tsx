@@ -1,10 +1,18 @@
+import {
+  ResizableHandle,
+  ResizablePanel,
+  ResizablePanelGroup,
+} from "@/components/ui/resizable";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center p-24">
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
         <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get Started&nbsp;
-          <code className="font-mono font-bold">Write your topic here :D</code>
+          Get Ready&nbsp;
+          <code className="font-mono font-bold">For your future Job :D</code>
         </p>
         <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
           <a
@@ -17,8 +25,26 @@ export default function Home() {
           </a>
         </div>
       </div>
-      <div className="mt-20">
-        <h1 className="text-4xl text-center font-bold">Story GPT</h1>
+      <div className="mt-10">
+        <h1 className="text-4xl text-center font-bold mb-5">PrepBuddy</h1>
+
+        <div className="w-[60vw] h-[60vh] border rounded-md shadow-md">
+          <ResizablePanelGroup direction="horizontal">
+            <ResizablePanel className="p-2">
+              <div className="border py-2 px-4 text-center rounded-sm hover:cursor-pointer">
+                New Interview
+              </div>
+            </ResizablePanel>
+            <ResizableHandle />
+            <ResizablePanel className="flex flex-col justify-between p-2">
+              <div></div>
+              <div className="flex w-full items-center space-x-2">
+                <Input type="text" placeholder="Your question" />
+                <Button type="submit">Ask</Button>
+              </div>
+            </ResizablePanel>
+          </ResizablePanelGroup>
+        </div>
       </div>
     </main>
   );
