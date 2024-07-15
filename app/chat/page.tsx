@@ -1,15 +1,15 @@
-import React from 'react'
+import React from "react";
 import {
-    ResizableHandle,
-    ResizablePanel,
-    ResizablePanelGroup,
-  } from "@/components/ui/resizable";
-  import { Button } from "@/components/ui/button";
-  import { Input } from "@/components/ui/input";
+  ResizableHandle,
+  ResizablePanel,
+  ResizablePanelGroup,
+} from "@/components/ui/resizable";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 
 export default function Page() {
   return (
-    <main className="flex min-h-screen flex-col items-center p-24">
+    <main className="flex flex-col items-center py-10">
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
         <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
           Get Ready&nbsp;
@@ -26,10 +26,8 @@ export default function Page() {
           </a>
         </div>
       </div>
-      <div className="mt-10">
-        <h1 className="text-4xl text-center font-bold mb-5">PrepBuddy</h1>
-
-        <div className="w-[60vw] h-[60vh] border rounded-md shadow-md">
+      <div className="mt-5">
+        <div className="w-[60vw] h-[70vh] border rounded-md shadow-md">
           <ResizablePanelGroup direction="horizontal">
             <ResizablePanel className="p-2">
               <div className="border py-2 px-4 text-center rounded-sm hover:cursor-pointer">
@@ -48,5 +46,5 @@ export default function Page() {
         </div>
       </div>
     </main>
-  )
+  );
 }

@@ -5,7 +5,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 px-4 lg:px-6 h-16 flex items-center bg-white shadow-md">
       <Link
-        href="#"
+        href="/"
         className="flex items-center justify-center"
         prefetch={false}
       >
@@ -16,13 +16,13 @@ export function Header() {
       </Link>
       <nav className="ml-auto flex gap-4 sm:gap-6">
         <a
-          href="#features"
+          href="/#features"
           className="text-sm font-medium hover:underline underline-offset-4"
         >
           Features
         </a>
         <a
-          href="#contact"
+          href="/#contact"
           className="text-sm font-medium hover:underline underline-offset-4"
         >
           Contact
