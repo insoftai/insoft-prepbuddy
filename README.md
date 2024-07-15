@@ -1,5 +1,5 @@
-## StoryGPT
-StoryGpt, designed to educate through short, engaging stories. Unlike this example, our stories will be brief, typically featuring five scenes accompanied by an image for each scene.
+## Prep Buddy
+Prep Buddy will be your best tutor to help you for the next Future Job. Please enjoy and get experienced with Senior interviewers.
 
 ## Development
 First, run the development server:
