@@ -11,6 +11,8 @@ export function Header() {
       >
         <LaptopIcon className="h-8 w-8" />
         <span className="sr-only">PrepBuddy</span>
+        <span className="font-bold ml-2 text-2xl">Prep</span>
+        <span className="font-bold text-2xl text-sky-500">Buddy</span>
       </Link>
       <nav className="ml-auto flex gap-4 sm:gap-6">
         <a
