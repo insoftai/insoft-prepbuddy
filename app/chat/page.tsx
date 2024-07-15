@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import {
   ResizableHandle,
   ResizablePanel,
@@ -6,8 +8,10 @@ import {
 } from "@/components/ui/resizable";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { PlusCircleIcon, UserIcon } from "lucide-react";
 
 export default function Page() {
+  const [messages, setMessages] = useState<string[]>([]);
   return (
     <main className="flex flex-col items-center py-10">
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
@@ -29,16 +33,29 @@ export default function Page() {
       <div className="mt-5">
         <div className="w-[60vw] h-[70vh] border rounded-md shadow-md">
           <ResizablePanelGroup direction="horizontal">
-            <ResizablePanel className="p-2">
-              <div className="border py-2 px-4 text-center rounded-sm hover:cursor-pointer">
-                New Interview
+            <ResizablePanel className="p-2 flex flex-col justify-between">
+              <Button variant="outline">New Interview</Button>
+
+              <div className="max-h-10">
+                <Button className="w-full" variant="outline">
+                  <UserIcon />
+                  <span>Create Your Profile</span>
+                </Button>
               </div>
             </ResizablePanel>
             <ResizableHandle />
-            <ResizablePanel className="flex flex-col justify-between p-2">
-              <div></div>
+            <ResizablePanel className="flex flex-col justify-between p-2 gap-y-2">
+              <div className="flex flex-col flex-grow justify-center items-center">
+                <div className="border rounded-md p-4">
+                  Please upload your resume or send job description here. Or you
+                  can start from asking any question.
+                </div>
+              </div>
 
               <div className="flex w-full items-center space-x-2">
+                <Button variant="ghost" size="sm">
+                  <PlusCircleIcon />
+                </Button>
                 <Input type="text" placeholder="Your question" />
                 <Button type="submit">Ask</Button>
               </div>
