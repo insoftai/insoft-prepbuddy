@@ -1,35 +1,12 @@
 import Link from "next/link";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { JSX, SVGProps } from "react";
+import { Header } from "@/components/Header";
 
 export function Hero() {
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="px-4 lg:px-6 h-16 flex items-center bg-white shadow-md">
-        <Link
-          href="#"
-          className="flex items-center justify-center"
-          prefetch={false}
-        >
-          <LaptopIcon className="h-8 w-8" />
-          <span className="sr-only">PrepBuddy</span>
-        </Link>
-        <nav className="ml-auto flex gap-4 sm:gap-6">
-          <a
-            href="#features"
-            className="text-sm font-medium hover:underline underline-offset-4"
-          >
-            Features
-          </a>
-          <a
-            href="#contact"
-            className="text-sm font-medium hover:underline underline-offset-4"
-          >
-            Contact
-          </a>
-        </nav>
-      </header>
+      <Header />
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-to-b from-white to-gray-100">
           <div className="container mx-auto px-4 md:px-6">
@@ -46,7 +23,7 @@ export function Hero() {
                 </div>
                 <div className="flex flex-col gap-4 sm:flex-row">
                   <Link
-                    href="/chat"
+                    href="#"
                     className="inline-flex h-12 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-white shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
                     prefetch={false}
                   >
@@ -151,9 +128,7 @@ export function Hero() {
                   placeholder="Enter your email"
                   className="max-w-lg flex-1"
                 />
-                <Link href="/chat">
-                  <Button>Try PrepBuddy</Button>
-                </Link>
+                <Button type="submit">Try PrepBuddy</Button>
               </form>
               <p className="text-xs text-gray-600">
                 Sign up to get started. No credit card required.{" "}
@@ -191,24 +166,5 @@ export function Hero() {
         </nav>
       </footer>
     </div>
-  );
-}
-
-function LaptopIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16" />
-    </svg>
   );
 }
