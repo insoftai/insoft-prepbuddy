@@ -7,7 +7,7 @@ export function Hero() {
   return (
     <div className="flex flex-col min-h-screen">
       <main className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-to-b from-white to-gray-100">
+        <section className="w-full py-6 md:py-12 lg:py-16 xl:py-24 bg-gradient-to-b from-white to-gray-100">
           <div className="container mx-auto px-4 md:px-6">
             <div className="grid gap-8 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
               <div className="flex flex-col justify-center space-y-6">
@@ -104,41 +104,6 @@ export function Hero() {
                 alt="Features"
                 className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last"
               />
-            </div>
-          </div>
-        </section>
-        <section
-          id="contact"
-          className="w-full py-12 md:py-24 lg:py-32 border-t bg-white"
-        >
-          <div className="container mx-auto grid items-center justify-center gap-6 px-4 text-center md:px-6">
-            <div className="space-y-4">
-              <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">
-                Get Started with PrepBuddy
-              </h2>
-              <p className="mx-auto max-w-[600px] text-gray-600 md:text-xl lg:text-base xl:text-xl">
-                Sign up today and start your journey to your dream job.
-              </p>
-            </div>
-            <div className="mx-auto w-full max-w-sm space-y-4">
-              <form className="flex gap-2">
-                <Input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="max-w-lg flex-1"
-                />
-                <Button type="submit">Try PrepBuddy</Button>
-              </form>
-              <p className="text-xs text-gray-600">
-                Sign up to get started. No credit card required.{" "}
-                <Link
-                  href="#"
-                  className="underline underline-offset-2"
-                  prefetch={false}
-                >
-                  Terms &amp; Conditions
-                </Link>
-              </p>
             </div>
           </div>
         </section>

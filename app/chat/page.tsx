@@ -37,6 +37,7 @@ export default function Page() {
             <ResizableHandle />
             <ResizablePanel className="flex flex-col justify-between p-2">
               <div></div>
+
               <div className="flex w-full items-center space-x-2">
                 <Input type="text" placeholder="Your question" />
                 <Button type="submit">Ask</Button>
